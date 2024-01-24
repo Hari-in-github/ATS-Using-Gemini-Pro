@@ -76,8 +76,8 @@ To use ATS Streamlit App, follow these steps:
 
 5. Click either one of two buttons displayed.
    ```
-   a.Tell me about the resume 
-   b.Percentage Match
+   a. Tell me about the resume 
+   b. Percentage Match
    ```
 
 ## License
