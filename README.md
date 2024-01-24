@@ -2,7 +2,7 @@
 
 ## Introduction
 ------------
-The ATS Streamlit App is a Python application which works as an application tracking system, wherein it takes two inputs . One is job description and second is resume as a pdf document. And the ATS app provides a brief information related to resume and jb and how the resume matches with job description.
+The ATS Streamlit Application integrates Google's Gemini Pro model to streamline resume evaluation. Users input job descriptions and upload resumes in PDF format, receiving detailed insights or percentage matches. With an intuitive interface, it enhances recruitment processes by efficiently analyzing candidate profiles and aligning them with specified job requirements.
 
 
 ## How It Works
@@ -10,15 +10,37 @@ The ATS Streamlit App is a Python application which works as an application trac
 
 ![ATS Streamlit Application User Interface](./docs/Ats_Userinterface.png)
 
-The application follows these steps to provide responses to your questions:
+1. Job Description Input:
 
-1. JOb Description : Takes input of the jd with which it has to compare the uploaded resume.
+   User provides the Job Description (jd) as input to the application.
+   This Job Description serves as the benchmark against which uploaded resumes will be evaluated.
 
-2. Resume uploading: The app reads the uploaded resume document and extracts its text content.
+2. Resume Uploading:
+   
+   User uploads a resume document in PDF format.
+   The application reads the uploaded PDF resume and extracts its text content for further processing.
 
-3. Language Model: The application utilizes a language model specifically Google's gemini pro to compare the resume with jd.
+3. Language Model Configuration:
 
-4. Response Generation: When you ask a question, The Jd and the text which is extracted from the resume are passed to the gemini pro model, then the user clicks either one of the two buttons , then the model compares the jd with the resume and either details of the resume or the percenatge match of the resume based on the option we choose will be displayed.
+   The application is configured to use Google's Gemini Pro language model for natural language processing tasks.
+
+4. Response Generation:
+
+   User initiates the question/response process by clicking on one of the buttons:
+   "Tell Me About the Resume" or
+   "Percentage Match."
+   The extracted resume text and the provided Job Description are passed to the Gemini Pro model for analysis.
+   For "Tell Me About the Resume" Button:
+
+   The application requests the Gemini Pro model to generate detailed information about the alignment of the resume with the Job Description.
+   Gemini Pro processes the input and provides a response highlighting strengths and weaknesses, evaluating how well the candidate's profile aligns with the specified job requirements.
+
+   For "Percentage Match" Button:
+
+   The application requests the Gemini Pro model to calculate the percentage match between the resume and the provided Job Description.
+   Gemini Pro performs the comparison and provides the percentage match as output.
+   Additionally, the application may display keywords missing in the resume and final thoughts on the match.
+   The generated response is presented to the user.
 
 
 ## Dependencies and Installation
